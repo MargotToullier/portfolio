@@ -4,12 +4,21 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      colors: {
-        teal: colors.teal,
-        cyan: colors.cyan,
-      },
-    },
+    backgroundColor: theme => ({
+     ...theme('colors'),
+     'opal': '#8AB9B5',
+     'darkGray':'#2B4141'
+    }),
+    textColor: theme => ({
+      ...theme('colors'),
+      'opal': '#8AB9B5',
+      'darkGray':'#2B4141'
+    }),
+    gradientColorStops: theme => ({
+      ...theme('colors'),
+      'opal': '#8AB9B5',
+      'darkGray':'#2B4141',
+     })
   },
   variants: {
     extend: {},
